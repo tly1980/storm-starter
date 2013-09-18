@@ -5,4 +5,5 @@ lib/
 .project
 *.jar
 .lein-deps-sum
-
+src/main/target
+target
