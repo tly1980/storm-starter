@@ -115,9 +115,9 @@ yet run the included unit tests.
 
 ## Install SBT
 
-The storm-starter build uses [SBT](http://www.scala-sbt.org/) 0.13.0.  
-Install SBT by following the
-[SBT installation instructions](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html).
+[SBT](http://www.scala-sbt.org/) can also be used to run storm-starter.
+
+Install SBT by following the [SBT installation instructions](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html).
 
 
 ## Running topologies with SBT
