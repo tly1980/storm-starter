@@ -6,6 +6,8 @@ scalaVersion := "2.10.2"
 
 unmanagedSourceDirectories in Compile <+= baseDirectory( _ / "src" / "jvm" )
 
+unmanagedSourceDirectories in Compile <+= baseDirectory( _ / "src" / "scala" )
+
 unmanagedResourceDirectories in Compile <+= baseDirectory( _ / "multilang" )
 
 unmanagedSourceDirectories in Test <+= baseDirectory( _ / "test" / "jvm" )
