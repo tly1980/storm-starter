@@ -9,7 +9,7 @@ Table of Contents
 * <a href="#getting-started">Getting started</a>
 * <a href="#leiningen">Using storm-starter with Leiningen</a>
 * <a href="#maven">Using storm-starter with Maven</a>
-
+* <a href="#sbt">Using storm-starter with SBT (Scala)</a>
 ---
 
 
@@ -107,3 +107,45 @@ Use the following Maven command to run the unit tests that ship with storm-start
 yet run the included unit tests.
 
     $ mvn -f m2-pom.xml test
+
+<a name="sbt"></a>
+
+# Using storm-starter with SBT / Scala
+
+## Install SBT
+
+The storm-starter build uses [SBT](http://www.scala-sbt.org/) 0.13.0.  
+Install SBT by following the
+[SBT installation instructions](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html).
+
+
+## Running topologies with SBT
+
+### To run a Java / Scala topology
+
+    $ sbt products
+    $ sbt 'run-main storm.starter.ExclamationTopology'
+
+
+### With SBT, you can list main classes and choose the one you wish to run:
+
+    $ sbt products run
+    
+    [success] Total time: 2 s, completed Sep 19, 2013 3:41:24 PM
+    Multiple main classes detected, select one to run:
+
+     [1] storm.starter.ManualDRPC
+     [2] storm.starter.trident.TridentReach
+     [3] storm.starter.SingleJoinExample
+     [4] my.play_with_scala.HelloWorld
+     [5] storm.starter.RollingTopWords
+     [6] storm.starter.WordCountTopology
+     [7] storm.starter.trident.TridentWordCount
+     [8] storm.starter.TransactionalWords
+     [9] storm.starter.ExclamationTopology
+     [10] storm.starter.BasicDRPCTopology
+     [11] storm.sacla_starter.topology.ExclamationTology
+     [12] storm.starter.TransactionalGlobalCount
+     [13] storm.starter.ReachTopology
+
+    Enter number:
